@@ -33,9 +33,7 @@ const Projects = () => {
       <section>
          {data.port.edges.map((edge)=>{
             return(
-               <article>{edge.node.title}
-               {edge.node.des.des}
-               <a href={edge.node.url.website}>Cool</a>
+               <article>
                </article>
             )
          })}

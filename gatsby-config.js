@@ -1,5 +1,5 @@
 require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
+   path: `.env.${process.env.NODE_ENV}`,
 });
 
 module.exports = {
@@ -15,6 +15,7 @@ module.exports = {
       `gatsby-plugin-react-helmet`,
       `gatsby-transformer-sharp`,
       `gatsby-plugin-sharp`,
+      `gatsby-plugin-styled-components`,
       {
          resolve: `gatsby-source-contentful`,
          options: {
