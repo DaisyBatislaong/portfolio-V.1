@@ -1,14 +1,13 @@
 import React from "react";
+import Footer from "./footer";
 import Navbar from "./Navbar";
-import Projects from "./Projects";
-import SEO from "./SEO";
 
-const Layout = () => {
+const Layout = ({ children }: any) => {
    return (
-      <div className="">
-         <SEO title="" />
+      <div className="flex flex-col min-h-screen">
          <Navbar />
-         <Projects />
+         {children}
+         <Footer />
       </div>
    );
 };

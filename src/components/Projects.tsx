@@ -31,7 +31,7 @@ const Projects = () => {
    `);
    return (
       <section>
-         {data.port.edges.map((edge)=>{
+         {data.port.edges.map((edge:object)=>{
             return(
                <article>
                </article>

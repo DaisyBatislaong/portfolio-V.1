@@ -6,6 +6,7 @@ module.exports = {
    siteMetadata: {
       title: "Daisy Jane Batislaong",
       description: "A front-end developer that specialized in ReactJS",
+    
       // url: "https://www.doe.com", // No trailing slash allowed!
       // image: "/images/snape.jpg", // Path to your image you placed in the 'static' folder
    },

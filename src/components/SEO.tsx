@@ -1,45 +1,51 @@
+
 import React from "react"
-import Helmet from "react-helmet"
+import { Helmet } from "react-helmet"
+import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 
 interface Props {
-  description?: string
-  lang?: string
-  meta?: []
   title: string
+  description: string
+
+}
+interface IPass{
+  defaultTitle: string
+  defaultDescription: string
+  titleTemplate: any
 }
 
-const SEO = ({ description, lang, meta, title }: Props) => {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-          }
-        }
-      }
-    `
-  )
+const SEO = ({ title, description }:Props) => {
+  const { site } = useStaticQuery(query)
 
-  const metaDescription = description || data.site.siteMetadata.description
+  const {
+    defaultTitle,
+    defaultDescription,
+  }:IPass = site.siteMetadata
 
-  return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={`${data.site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-      ].concat(meta || [])}
-    />
+  const seo = {
+    title: title || defaultTitle,
+    description: description || defaultDescription,
+  }
+
+  return(
+    <Helmet title={seo.title} >
+      <meta name="description" content={seo.description} />
+    </Helmet>
   )
 }
+
 
 export default SEO
+
+const query = graphql`
+  query SEO {
+    site {
+      siteMetadata {
+        defaultTitle: title
+        defaultDescription: description
+      }
+    }
+  }
+`
+
