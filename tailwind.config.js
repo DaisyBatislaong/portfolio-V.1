@@ -4,7 +4,7 @@ module.exports = {
    theme: {
       extend: {
          fontFamily: {
-            "roboto-bold": ["Roboto Condensed", "sans-serif"],
+            "roboto-bold": ["Roboto", "sans-serif"],
             "cabin-regular": ["Cabin", "sans-serif"],
          },
       },

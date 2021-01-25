@@ -1,13 +1,11 @@
 import React from "react";
-import Footer from "./footer";
 import Navbar from "./Navbar";
 
 const Layout = ({ children }: any) => {
    return (
-      <div className="flex flex-col min-h-screen">
+      <div className="h-screen 2xl:container 2xl:mx-auto ">
          <Navbar />
-         {children}
-         <Footer />
+         <main className="flex flex-col items-center justify-center h-5/6">{children}</main>
       </div>
    );
 };
