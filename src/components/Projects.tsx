@@ -4,6 +4,17 @@ import Img from "gatsby-image";
 import SocialItem from "./SocialItem";
 import { Github } from "@icons-pack/react-simple-icons";
 
+
+interface Iprops{
+   title: string,
+   url: {github:string, website:string},
+   tech:[{content:string}]
+   des:{des:string}
+   img:any
+   index:number
+}
+
+
 const Projects = () => {
    const data = useStaticQuery(graphql`
       {
@@ -31,22 +42,22 @@ const Projects = () => {
    `);
 
    return (
-      <section className="grid">
-         {data.port.nodes.map(({ title, url, tech, des, img, index }) => {
+      <section className="grid auto-cols-auto py-8 gap-y-12">
+         {data.port.nodes.map(({ title, url, tech, des, img, index }:Iprops) => {
             return (
-               <article key={index} className="flex items-center">
-                  <Img fluid={img[0].fluid} style={{ width: "40rem" }} />
+               <article key={index} className="flex items-center space-x-7">
+                  <Img fluid={img[0].fluid} style={{ "width": "30rem" }} className="" />
                   
                   <div className="flex flex-col items-end">
-                     <h4 className="font-cabin-regular">Featured Project</h4>
-                     <h5 className="font-roboto-bold">{title}</h5>
-                     <p className="">{des.des}</p>
+                     <h2 className="font-cabin-regular">Featured Project</h2>
+                     <h1 className="font-roboto-bold text-2xl pt-2">{title}</h1>
+                     <div className="relative w-96 text-right py-4"><p className="">{des.des}</p></div>
                      <ul className="flex space-x-6">
                         {tech.map((item, index) => {
-                           return <li key={index}>{item.content}</li>;
+                           return <li className="font-cabin-regular text-sm" key={index}>{item.content}</li>;
                         })}
                      </ul>
-                     <div className="flex space-x-6">
+                     <div className="flex space-x-5 pt-2">
                         <SocialItem link={url.github}>
                            <Github />
                         </SocialItem>
