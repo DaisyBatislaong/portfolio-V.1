@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link } from "@reach/router";
 import { LinkContainer } from "../styles/Navbar";
 
 const Navbar = () => {
@@ -12,9 +12,9 @@ const Navbar = () => {
       <nav className="w-full">
          <LinkContainer className=" absolute flex flex-col space-y-24 md:space-y-0 md:justify-end md:space-x-16  md:mr-12 md:pt-8 md:flex-row md:relative font-cabin-regular" clicked={clicked}>
             <Link to="/">Home</Link>
-            <Link to="/">About Me</Link>
+            <Link to="/about/">About Me</Link>
             <Link to="/projects/">Projects</Link>
-            <Link to="/Contact">Contacts</Link>
+            <Link to="/contacts/">Contacts</Link>
          </LinkContainer>
          <ul className="md:hidden flex justify-end mr-6 pt-6  relative z-50">
             <li onClick={handleClick}>
