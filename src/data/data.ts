@@ -1,21 +1,21 @@
-import { Html5, ReactJs, Gatsby, Tailwindcss, Javascript, Typescript, CssThree, Sass, Github, Linkedin, Gmail, Twitter } from "@icons-pack/react-simple-icons";
+import { SiHtml5, SiReact, SiGatsby, SiTailwindcss, SiJavascript, SiTypescript, SiCss3, SiSass, SiGithub, SiLinkedin, SiGmail, SiTwitter } from 'react-icons/si'
 
 export const socialLinks = [
-   { link: "https://github.com/DaisyBatislaong", icon: Github, color: "" },
-   { link: "https://www.linkedin.com/in/daisybatislaong/", icon: Linkedin, color: "#0e76a8"  },
-   { link: "dtechimperium@gmail.com", icon: Gmail, color: "#BB001B"  },
-   { link: "https://twitter.com/DTechImperium", icon: Twitter, color: "#00acee"  },
+   { link: "https://github.com/DaisyBatislaong", icon: SiGithub, color: "" },
+   { link: "https://www.linkedin.com/in/daisybatislaong/", icon: SiLinkedin, color: "#0e76a8"  },
+   { link: "dtechimperium@gmail.com", icon: SiGmail, color: "#BB001B"  },
+   { link: "https://twitter.com/DTechImperium", icon: SiTwitter, color: "#00acee"  },
 ];
 
 export const technologies = [
-   { name: "HTML", icon: Html5, color: "#e34c26" },
-   { name: "Css", icon: CssThree, color: "#264de4" },
-   { name: "SCSS", icon: Sass, color: " #c69" },
-   { name: "TailwindCSS", icon: Tailwindcss, color: "#6bdbfd" },
-   { name: "Javascript", icon: Javascript, color: "#f0db4f" },
-   { name: "Typescript", icon: Typescript, color: "#007acc" },
-   { name: "ReactJS", icon: ReactJs, color: "#61DBFB" },
-   { name: "Gatsby", icon: Gatsby, color: "#663399" },
+   { name: "HTML", icon: SiHtml5, color: "#e34c26" },
+   { name: "Css", icon: SiCss3, color: "#264de4" },
+   { name: "SCSS", icon: SiSass, color: " #c69" },
+   { name: "TailwindCSS", icon: SiTailwindcss, color: "#6bdbfd" },
+   { name: "Javascript", icon: SiJavascript, color: "#f0db4f" },
+   { name: "Typescript", icon: SiTypescript, color: "#007acc" },
+   { name: "ReactJS", icon: SiReact, color: "#61DBFB" },
+   { name: "Gatsby", icon: SiGatsby, color: "#663399" },
 ];
 
 export const aboutMe =

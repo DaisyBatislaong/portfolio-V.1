@@ -1,21 +1,20 @@
 import React from "react";
 import SocialLinks from "./SocialLinks";
-import Img from 'gatsby-image'
+import Img from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
 
 const MainSection = () => {
-   
-const data = useStaticQuery(graphql`
-{
-   pic: contentfulOtherContent(title: { eq: "portfolio" }) {
-      background {
-         fluid {
-            ...GatsbyContentfulFluid_tracedSVG
+   const data = useStaticQuery(graphql`
+      {
+         pic: contentfulOtherContent(title: { eq: "portfolio" }) {
+            background {
+               fluid {
+                  ...GatsbyContentfulFluid
+               }
+            }
          }
       }
-   }
-}
-`);
+   `);
    return (
       <section className="flex flex-col items-center justify-center h-full">
          <div>

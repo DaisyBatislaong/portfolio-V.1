@@ -3,9 +3,9 @@ import Navbar from "./Navbar";
 
 const Layout = ({ children }: any) => {
    return (
-      <body className="h-screen 2xl:container 2xl:mx-auto w-auto">
+      <body>
          <Navbar />
-         <main className="flex justify-center">{children}</main>
+         <section className="mt-16 flex flex-col">{children}</section>
       </body>
    );
 };

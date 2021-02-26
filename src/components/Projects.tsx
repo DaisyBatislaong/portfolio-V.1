@@ -1,7 +1,8 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import Img from "gatsby-image";
-import { Github } from "@icons-pack/react-simple-icons";
+import { SiGithub } from "react-icons/si";
+import { HiExternalLink } from "react-icons/hi";
 import TitleHero from "./TitleHero";
 import SocialItem from "./SocialItem";
 
@@ -32,7 +33,7 @@ const Projects = () => {
                }
                img {
                   fluid {
-                     ...GatsbyContentfulFluid_tracedSVG
+                     ...GatsbyContentfulFluid
                   }
                }
             }
@@ -41,21 +42,20 @@ const Projects = () => {
    `);
 
    return (
-      <article className="grid justify-center justify-items-center">
+      <article className="mt-60 mx-52">
          <TitleHero title="Projects" />
-         <section className="grid auto-rows-max gap-y-12 mt-8 justify-center mx-4 md:mx-0">
+         <section className="grid gap-y-20 mt-24">
             {data.port.nodes.map(({ title, url, tech, des, img, index }: Iprops) => {
                return (
-                  <article key={index} className="flex flex-wrap relative md:items-center md:space-x-16">
-                     <Img fluid={img[0].fluid} style={{ width: "30rem" }} className=" " />
-
-                     <div className="flex flex-col absolute items-center w-full h-full justify-center bg-yellow-500 md:items-end md:bg-transparent md:relative">
+                  <article key={index} className="grid grid-cols-2 gap-x-20">
+                     <Img fluid={img[0].fluid} style={{ width: "30rem" }} />
+                     <div className="flex flex-col items-end">
                         <p className="text-lg">Featured Project</p>
                         <h5 className="pt-2">{title}</h5>
                         <div className="relative md:w-96 md:text-right py-4">
                            <p className="">{des.des}</p>
                         </div>
-                        <ul className="flex space-x-6">
+                        <ul className="flex space-x-3">
                            {tech.map((item, index) => {
                               return (
                                  <li className="font-cabin-regular text-sm" key={index}>
@@ -64,15 +64,12 @@ const Projects = () => {
                               );
                            })}
                         </ul>
-                        <div className="flex space-x-5 pt-2">
+                        <div className="flex space-x-4 mt-2">
                            <SocialItem link={url.github}>
-                              <Github />
+                              <SiGithub size="2rem" />
                            </SocialItem>
                            <SocialItem link={url.website}>
-                              {" "}
-                              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                              </svg>
+                              <HiExternalLink size="2rem" />
                            </SocialItem>
                         </div>
                      </div>
