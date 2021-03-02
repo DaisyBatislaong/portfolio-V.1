@@ -17,7 +17,7 @@ const Navbar = () => {
             <Link to="/">Projects</Link>
             <Link to="/">Contacts</Link>
          </LinkContainer>
-         <ul className="md:hidden flex justify-end mr-6 pt-6  relative z-50">
+         <ul className="md:hidden flex justify-end pt-6 mr-6 relative z-50">
             <li onClick={handleClick}>
                {clicked ? (
                   <HiX size="2rem" className="text-white"/>

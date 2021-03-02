@@ -1,9 +1,10 @@
 import React from 'react'
 
 const Footer = () => {
+
    return (
-      <div>
-         cool
+      <div className="mt-24 mb-10 text-center font-semibold">
+         Created by Daisy Batislaong || &copy; 2021 
       </div>
    )
 }

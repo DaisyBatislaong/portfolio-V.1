@@ -42,20 +42,20 @@ const Projects = () => {
    `);
 
    return (
-      <article className="mt-60 mx-52">
+      <article className=" mx-20 md:mx-52">
          <TitleHero title="Projects" />
          <section className="grid gap-y-20 mt-24">
             {data.port.nodes.map(({ title, url, tech, des, img, index }: Iprops) => {
                return (
-                  <article key={index} className="grid grid-cols-2 gap-x-20">
-                     <Img fluid={img[0].fluid} style={{ width: "30rem" }} />
-                     <div className="flex flex-col items-end">
+                  <article key={index} className="grid gap-y-4 md:gap-y-0 md:grid-cols-2 md:gap-x-20 place-items-center">
+                     <div className="w-48 md:w-96"><Img fluid={img[0].fluid} /></div>
+                     <div className="flex flex-col items-center md:items-end">
                         <p className="text-lg">Featured Project</p>
                         <h5 className="pt-2">{title}</h5>
-                        <div className="relative md:w-96 md:text-right py-4">
+                        <div className="relative text-center md:w-96 md:text-right pb-4">
                            <p className="">{des.des}</p>
                         </div>
-                        <ul className="flex space-x-3">
+                        <ul className="flex space-x-4">
                            {tech.map((item, index) => {
                               return (
                                  <li className="font-cabin-regular text-sm" key={index}>

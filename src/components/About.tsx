@@ -3,14 +3,13 @@ import { aboutMe, technologies } from "../data/data";
 import TitleHero from "./TitleHero";
 
 const About = () => {
-
    return (
-      <article className="mx-52 mt-44">
-         <section className="space-y-8">
+      <React.Fragment>
+         <div className="my-44 mx-20 md:mx-52 space-y-8">
             <TitleHero title="About Me" />
             <p className="text-justify">{aboutMe}</p>
             <h4 className="text-2xl">Technologies that I use:</h4>
-            <ul className="flex space-x-12">
+            <ul className="flex flex-wrap flex-col space-y-6 md:flex-row md:space-x-12 md:space-y-0">
                {technologies.map((tech, index) => {
                   return (
                      <li key={index} className="flex flex-col items-center">
@@ -20,8 +19,8 @@ const About = () => {
                   );
                })}
             </ul>
-         </section>
-      </article>
+         </div>
+      </React.Fragment>
    );
 };
 
