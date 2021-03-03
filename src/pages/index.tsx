@@ -2,14 +2,16 @@ import React from "react";
 import About from "../components/About";
 import MainSection from "../components/MainSection";
 import Projects from "../components/Projects";
+import { Router, Link } from "@reach/router";
 
 const index = () => {
    return (
-      <React.Fragment>
-         <MainSection />
-         <About/>
-         <Projects/>
-      </React.Fragment>
+  
+         <Router>
+            <MainSection path="/" />
+            <About path="/about" />
+            <Projects path="/projects"/>
+         </Router>
    );
 };
 
