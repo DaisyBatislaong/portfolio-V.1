@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "@reach/router";
+import { Link } from "gatsby";
 import { LinkContainer } from "../styles/Navbar";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 
