@@ -1,9 +1,9 @@
-import { SiHtml5, SiReact, SiGatsby, SiTailwindcss, SiJavascript, SiTypescript, SiCss3, SiSass, SiGithub, SiLinkedin, SiGmail, SiTwitter } from "react-icons/si";
+import { SiHtml5, SiReact, SiGatsby, SiTailwindcss, SiJavascript, SiTypescript, SiCss3, SiSass, SiGithub, SiLinkedin, SiGmail, SiTwitter, SiSkype } from "react-icons/si";
 
 export const socialLinks = [
    { link: "https://github.com/DaisyBatislaong", icon: SiGithub, color: "" },
    { link: "https://www.linkedin.com/in/daisybatislaong/", icon: SiLinkedin, color: "#0e76a8" },
-   { link: "dtechimperium@gmail.com", icon: SiGmail, color: "#BB001B" },
+   { link: "daisyjanebatislaong1124@gmail.com", icon: SiGmail, color: "#BB001B" },
    { link: "https://twitter.com/DTechImperium", icon: SiTwitter, color: "#00acee" },
 ];
 

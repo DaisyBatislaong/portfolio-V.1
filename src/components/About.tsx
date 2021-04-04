@@ -1,10 +1,12 @@
 import React from "react";
 import { aboutMe, technologies } from "../data/data";
+import SEO from "./SEO";
 import TitleHero from "./TitleHero";
 
 const About = () => {
    return (
       <React.Fragment>
+         <SEO title="About"/>
          <div className="mb-28 mx-20 md:mx-52 space-y-8">
             <TitleHero title="About Me" />
             <p className="text-justify">{aboutMe}</p>

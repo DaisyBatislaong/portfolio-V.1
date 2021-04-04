@@ -1,10 +1,10 @@
 import React from "react";
-import MainSection from "../components/MainSection";
+import Projects from "../components/Projects";
 
 const index = () => {
    return (
       <React.Fragment>
-         <MainSection />
+         <Projects/>
       </React.Fragment>
    );
 };
