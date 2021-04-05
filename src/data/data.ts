@@ -1,4 +1,4 @@
-import { SiHtml5, SiReact, SiGatsby, SiTailwindcss, SiJavascript, SiTypescript, SiCss3, SiSass, SiGithub, SiLinkedin, SiGmail, SiTwitter, SiSkype } from "react-icons/si";
+import { SiHtml5, SiReact, SiGatsby, SiTailwindcss, SiJavascript, SiTypescript, SiCss3, SiSass, SiGithub, SiLinkedin, SiGmail, SiTwitter } from "react-icons/si";
 
 export const socialLinks = [
    { link: "https://github.com/DaisyBatislaong", icon: SiGithub, color: "" },
